@@ -1,0 +1,15 @@
+import json
+import os
+
+class ArchivoServicio:
+    @staticmethod
+    def cargar_json(ruta_relativa):
+        # Obtiene la ruta de la raíz del proyecto (un nivel arriba de /servicios)
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        ruta_absoluta = os.path.join(base_dir, ruta_relativa)
+        
+        try:
+            with open(ruta_absoluta, 'r', encoding='utf-8') as archivo:
+                return json.load(archivo)
+        except (FileNotFoundError, json.JSONDecodeError):
+            return []

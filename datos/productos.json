@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "nombre": "Pizza Margherita",
+    "precio": 12.50,
+    "categoria": "Platos Principales"
+  },
+  {
+    "id": 2,
+    "nombre": "Jugo Natural de Naranja",
+    "precio": 3.00,
+    "categoria": "Bebidas"
+  }
+]
